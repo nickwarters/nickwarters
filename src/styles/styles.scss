@@ -1,0 +1,52 @@
+@use './reset.scss';
+
+:root {
+    --c-darkest-grey: #202020;
+    --c-light-grey: lightgrey;
+    --f-s: 0.8rem;
+    --f-m: 1rem;
+    --f-l: 1.5rem;
+    --line-height: 2rem;
+}
+
+html {
+    background-color: var(--c-darkest-grey);
+    color: var(--c-light-grey);
+    font-size: var(--f-m);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+        margin: 0 2rem;
+        &:first-of-type {
+            margin: 0 2rem 0 0;
+        }
+        &:last-of-type {
+            margin: 0 0 0 2rem;
+        }
+    }
+}
+
+h1 {
+    color: white;
+    font-size: var(--f-l);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: var(--c-light-grey);
+}

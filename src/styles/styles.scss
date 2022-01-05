@@ -1,18 +1,27 @@
 @use './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+
 
 :root {
     --c-darkest-grey: #202020;
     --c-light-grey: lightgrey;
+    --c-highlight: #339989;
+    --c-mid-grey: #2b2c28;
     --f-s: 0.8rem;
     --f-m: 1rem;
     --f-l: 1.5rem;
     --line-height: 2rem;
+    --f-family: 'Poppins', sans-serif;
 }
 
 html {
     background-color: var(--c-darkest-grey);
     color: var(--c-light-grey);
     font-size: var(--f-m);
+    font-family: var(--f-family);
+    line-height: var(--line-height);
+    letter-spacing: 3px;
 }
 
 .app {
@@ -38,15 +47,31 @@ nav {
     }
 }
 
-h1 {
+h1,h2, .h1, .h2 {
     color: white;
     font-size: var(--f-l);
 }
 
-a,
-a:visited,
-a:hover,
-a:active {
+h3,h4, .h3, .h4{
+    color:white;
+    font-weight: 700;
+}
+
+
+
+a{
     text-decoration: none;
     color: var(--c-light-grey);
+    &:hover{
+        color: var(--c-highlight);
+    }
+}
+
+ul {
+    padding-left: 1rem;
+    list-style: circle;
+}
+
+.post-link{
+    color:white;
 }
